@@ -1,0 +1,23 @@
+#ADD_SUBDIRECTORY(autorejoin)
+#ADD_SUBDIRECTORY(autojoin)
+#ADD_SUBDIRECTORY(mods)
+##ADD_SUBDIRECTORY(megahal)
+#ADD_SUBDIRECTORY(memo)
+#ADD_SUBDIRECTORY(user)
+
+MACRO(SUBDIRLIST result curdir)
+  FILE(GLOB children RELATIVE ${curdir} ${curdir}/*)
+  SET(dirlist "")
+  FOREACH(child ${children})
+    IF(IS_DIRECTORY ${curdir}/${child})
+        SET(dirlist ${dirlist} ${child})
+    ENDIF()
+  ENDFOREACH()
+  SET(${result} ${dirlist})
+ENDMACRO()
+
+SUBDIRLIST(SUBDIRS ${CMAKE_CURRENT_SOURCE_DIR})
+
+FOREACH(subdir ${SUBDIRS})
+    ADD_SUBDIRECTORY(${subdir})
+ENDFOREACH()

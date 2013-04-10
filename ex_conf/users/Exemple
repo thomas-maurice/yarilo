@@ -1,0 +1,29 @@
+# User Epsilon for Yarilo bot
+
+# General settings
+# Same ID than the file name
+ID Exemple
+
+# Servers configuration
+# Nicknames configuration for Epiknet
+SERVER_N Epiknet Epsilon
+SERVER_N Epiknet Epsilon_
+
+# Nicknames configuration for Fooserv
+SERVER_N Fooserv Foonick
+
+# Hosts configuration for Epiknet
+SERVER_H Epiknet ~epsilon@EpiK-5CFA385E.fbx.proxad.net
+SERVER_H Epiknet ~epsilon@2DD12490.95FD2338.9E3FAB29.EpiK
+
+# Hosts configuration for Fooserv
+SERVER_H Fooserv ~foo@test.foobar
+SERVER_H Fooserv ~foo2@test.foobar
+
+# Partyline configuration
+PL 1
+PL_N Epsilon
+PL_P 206c80413b9a96c1312cc346b7d2517b84463edd
+FLAGS OMRQPUohv
+
+# End of Epsilon configuration

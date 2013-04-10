@@ -1,0 +1,31 @@
+IF(NOT WIN32)
+GET_FILENAME_COMPONENT(modname ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+
+FILE(
+	GLOB_RECURSE
+	autorejoin_src
+	*.cpp
+	*.c
+	*.h
+)
+
+ADD_LIBRARY(
+	${modname}
+	SHARED
+	${autorejoin_src}
+)
+
+TARGET_LINK_LIBRARIES(
+	${modname}
+	${YARILO_LIBS}
+)
+
+SET_TARGET_PROPERTIES(
+	${modname}
+	PROPERTIES
+	PREFIX ""
+	LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/modules"
+)
+
+INSTALL(TARGETS ${modname} DESTINATION modules)
+ENDIF()
