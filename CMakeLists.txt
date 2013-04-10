@@ -4,7 +4,6 @@ include(ExternalProject)
 PROJECT(Yarilo)
 
 FIND_PACKAGE(OpenSSL)
-FIND_PACKAGE(Lua5)
 
 IF(NOT OPENSSL_FOUND)
 	message(FATAL_ERROR "You need to install openssl. Exiting.")
