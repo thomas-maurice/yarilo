@@ -34,6 +34,8 @@
 #include <logs.h>
 #include <module_info.h>
 
+#include <filesystem.h>
+
 #include <classes.h>
 
 #include <event.h>

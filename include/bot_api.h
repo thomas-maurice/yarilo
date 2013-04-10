@@ -20,5 +20,6 @@ class Event;
 #include <sha1.h>
 #include <user.h>
 #include <user_info.h>
+#include <filesystem.h>
 
 #endif

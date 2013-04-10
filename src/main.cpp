@@ -25,6 +25,7 @@
 #include <server.h>
 #include <bot.h>
 #include <misc.h>
+#include <filesystem.h>
 #include <color_console.h>
 
 using namespace std;
@@ -46,7 +47,16 @@ int main(int argc, char **argv)
 	
 	reinit_console();
 	
+	color_console(WHITE, BLACK);
+	
 	cout << endl;
+	
+	if(!is_standard_fs()) {
+		color_console(RED, BLACK);
+		cout << "[!] Standard filesystem non-existant, creating it. Don't forget to create a `conf/bot.conf` file." << endl;
+		build_standard_fs();
+		color_console(WHITE, BLACK);
+	}
 	
 	Abstract_socket::Init_Network();
 

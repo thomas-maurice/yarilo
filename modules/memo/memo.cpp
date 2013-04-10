@@ -74,6 +74,7 @@ int DllExport on_load()
 		}
 	}
 	
+	closedir(dir);
 	
 	return 0;
 }
